@@ -1,7 +1,11 @@
-The description of interfaces not provided since it is given in the problem
-All functions work proprerly for the given test cases
+GETTING FAMILIAR WITH JAVA
+LINKED LISTS
+ITERATOR
+
+The interfaces define the task
+
 //////////////////////////////////
-public class Node<T> implements Position_<T>//,Iterator<T>
+public class Node<T> implements Position_<T>
 {
 	//Node holds type T data
 	Node(T data)
