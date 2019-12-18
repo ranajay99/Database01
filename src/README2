@@ -1,1 +1,292 @@
 DETAILS OF THE ASSIGNMENT
+
+The interfaces define the task
+
+//////////////////////////////////
+public class Node<T> implements Position_<T>
+{
+	//Node holds type T data
+	Node(T data)
+	{
+		//constructor
+	}
+	public T value()
+	{
+		//returns data
+	}
+	public Position_<T> after()
+	{
+		//returns next link
+	}
+}
+/////////////////////////////////////
+class Linkedlist<T> implements LinkedList_<T>
+{
+	Linkedlist()
+	{
+		//constructor
+	}
+	public Position_<T> add(T element)
+	{
+		//adds an element to the list		
+	}
+	public T remove()
+	{
+		//removes the last link
+		//returns the data contained
+	}
+	public Iterator<Position_<T>> positions()
+	{
+		//creates iterator object to traverse the list
+	}
+	public int count()
+	{
+		//returns the number of elements in the linked list
+	}
+}
+//////////////////////////////////
+public class IT<T> implements Iterator<Position_<T>>
+{
+	IT(Node<T> ob)
+	{
+		//constructor
+	}
+	public boolean hasNext()
+	{	
+		//checks if the next position exists
+	}
+	public Position_<T> next()
+	{
+		//returns the next position
+	}
+}
+/////////////////////////////
+public class Assignment1 
+{
+	public static void main(String args[])
+	{
+		//reads files and executes
+	}
+	private static void getData()
+	{
+		//stores the data in respective linkedlists
+	}
+	private static void answerQueries()
+	{
+		//dealing with queries
+	}
+}
+//////////////////////////////
+public class Student implements Student_
+{	
+	Student(String name,String entry,String hostel,String dept)
+	{
+		//constructor to initialise values
+	}
+	public String hostel()
+	{
+		//returns hostel name
+	}
+	public String name()
+	{
+		//returns student name
+	}
+	public String entryNo()
+	{
+		//returns entry number String
+	}
+	public String department()
+	{
+		//returns department name
+	}
+	public void addcourse(String name,String code,String grade)
+	{
+		//adds corresponding course to the course list
+	}
+	public boolean checkcourse(String coursenum)
+	{
+		//checks if a particular course is present 
+	}
+	public String completedCredits()
+	{
+		//returns completed credits
+	}
+	public String cgpa()
+	{
+		//computes cgpa
+	}
+	public Iterator<CourseGrade_> courseList()
+	{
+		//creates an iterator to traverse course list
+	}
+	public void dispcourse()
+	{
+		//displays course list in lexicographical order
+	}
+	public void insert(int index,CourseGrade_ cn)
+	{
+		//sorts the courses in an array using insertion sort
+	}
+}
+////////////////////////////////////////////////
+public class CourseG implements CourseGrade_ 
+{
+	CourseG(String title,String code,String g)
+	{
+		//constructor to initialise values
+	}
+	public String coursetitle()
+	{
+		//returns the course name	
+	}
+	public String coursenum()
+	{
+		//returns the course code String	
+	}
+	public GradeInfo_ grade()
+	{
+		//returns corresponding grade object
+	}
+}
+////////////////////////////////////////////////
+public class Grade implements GradeInfo_
+{
+	Grade(String g)
+	{
+		//constructor to initialise the values
+	}
+	public int gradep()
+	{
+		//returns corresponding points
+	}
+	public String gradel()
+	{
+		//returns grade alphabet
+	}
+}
+/////////////////////////////////
+public class Course implements Entity_
+{
+	Course(String courses,String coursecode)
+	{
+		//constructor to initialise values
+	}
+	public String name()
+	{
+		//returns course name
+	}
+	public String number()
+	{
+		//returns course code String
+	}
+	public void addstudent(Student s)
+	{
+		//adds student to this course type if applied
+	}
+	public Iterator<Student_> studentList()
+	{
+		//creates an iterator to traverse the corresponding student list 	
+	}
+	public void dispstudents(Student s)
+	{
+		//displays the students in lexicographical order
+	}
+	public void insert(int index,Student_ cn)
+	{
+		//sorts using insertion sort
+	}
+}
+///////////////////////////////////
+public class Hostel implements Entity_ 
+{
+	Hostel(String hostel)
+	{
+		//constructor to initialise values
+	}
+	public String name()
+	{
+		//returns hostel name
+	}
+	public void addstudent(Student s)
+	{
+		//adds student to the list if belongs
+	}
+	public Iterator<Student_> studentList()
+	{
+		//creates an iterator to traverse the corresponding student list 	
+	}
+	public void dispstudents(Student s)
+	{
+		//displays the students in lexicographical order
+	}
+	public void insert(int index,Student_ cn)
+	{
+		//sorts using insertion sort
+	}
+}
+///////////////////////////////////////////
+public class Department implements Entity_
+{
+	Department(String dept)
+	{
+		//initialises the values
+	}
+	public String name()
+	{
+		//returns department
+	}
+	public void addstudent(Student s)
+	{
+		//adds student to the list if belongs to this department
+	}
+	public Iterator<Student_> studentList()
+	{
+		Iterator<Student_> sd=new Iter2(students.head);
+		return sd;		
+	}
+	public Iterator<Student_> studentList()
+	{
+		//creates an iterator to traverse the corresponding student list 	
+	}
+	public void dispstudents(Student s)
+	{
+		//displays the students in lexicographical order
+	}
+	public void insert(int index,Student_ cn)
+	{
+		//sorts using insertion sort
+	}
+}
+///////////////////////////////////////////
+public class Iter implements Iterator<CourseGrade_> 
+{
+	Iter(Node<CourseG> node)
+	{
+		//constructor
+	}
+	public boolean hasNext()
+	{
+		//checks if the next postion has something
+	}
+	public CourseGrade_ next()
+	{
+		//returns the next position		
+	}
+}
+///////////////////////////////////////
+public class Iter2 implements Iterator<Student_>
+{
+	Iter2(Node<Student> node)
+	{
+		//constructor
+	}
+	public boolean hasNext()
+	{
+		//checks if the next postion has something
+	}
+	public CourseGrade_ next()
+	{
+		//returns the next position		
+	}
+}
+/////////////////////////////////////
